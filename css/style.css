@@ -1,0 +1,32 @@
+.header{
+    display: flex; align-items: center;
+    justify-content: space-between;
+}.icon{
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    background-image: url("../images/gambar-burung.jpg");
+    background-size: cover;
+    background-position: center;
+}.navbar {
+    display: flex;
+    justify-content: flex-end;
+    display: flex; gap: 10px;
+}.home-page{
+    min-height: 500px;
+}.profile{
+    min-height: 500px;
+}.portofolio{
+    min-height: 500px;
+}.contact-us{
+    min-height: 500px;
+}.judul{
+    text-align: center;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+    
+}.text{
+    text-align: center;
+    font-size: 20px;
+}
