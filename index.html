@@ -3,49 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css\style.css">
+    <title>MyProject</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
-    <hr/>
     <header class="header">
-        <div class="icon"></div>
+        <div class="logo-container">
+            <img src="images/gambar-burung.jpg" alt="Logo" class="logo-img">
+            <span class="logo-text">Fly'B</span>
+        </div>
         <nav class="navbar">
-            <a href="#home-page" style="border: 2px solid #000; padding: 10px 10px; border-radius: 8px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;">Home</a>
-            <a href="#our-profile" style="border: 2px solid #000; padding: 10px 10px; border-radius: 8px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">our profile</a>
-            <a href="#portofolio" style="border: 2px solid #000; padding: 10px 10px; border-radius: 8px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">portofolio</a>
-            <a href="#contact-us" style="border: 2px solid #000; padding: 10px 10px; border-radius: 8px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Contact us</a>
+            <a href="index.html">Home</a>
+            <a href="profile.html">My Profile</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact-me">Contact Me</a>
         </nav>
     </header>
-    <hr/>
-    
-    <main>
-        <!-- home -->
-        <section id="home-page" class="home-page">
-            <header>
-                <h2 class="judul">Hi.. welcome to our website</h2>
-                <p class="text">ini adalah website testing saya</p>
-            </header>
+
+    <main class="container">
+        <section id="home-page" class="hero">
+            <h1>Hi <span id="user-name">Guest</span>, Welcome To My Website</h1>
+            <p>Ini adalah project digital saya sebagai student di </p><a href="https://www.revou.co/" target="_blank"> Revou</a>
         </section>
-        <hr/>
-        <!-- our profile -->
-        <section id="our-profile" class="profile">
-            <h2 class="judul">our profile</h2>
-            <p class="text">ini adalah website testing saya</p>
+
+        <section id="portfolio" class="portfolio">
+            <h2>My Skills & Projects</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <i class="fas fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Membangun website responsif dengan HTML, CSS, dan JavaScript.</p>
+                </div>
+                <div class="portfolio-item">
+                    <i class="fas fa-palette"></i>
+                    <h3>UI/UX Design</h3>
+                    <p>Merancang antarmuka yang intuitif dan mudah digunakan.</p>
+                </div>
+                <div class="portfolio-item">
+                    <i class="fab fa-github"></i>
+                    <h3>Version Control</h3>
+                    <p>Menggunakan Git & GitHub untuk kolaborasi dalam proyek tim.</p>
+                </div>
+            </div>
         </section>
-        <hr/>
-        <!-- portofolio -->
-        <section id="portofolio" class="portofolio">
-            <h2 class="judul">portofolio</h2>
-            <p class="text">ini adalah website testing saya</p>
+
+        <section id="contact-me" class="contact-form-section">
+            <h2>Contact Me</h2>
+            <div class="form-wrapper">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="nama">Nama:</label>
+                        <input type="text" id="nama" name="nama" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tanggal-lahir">Tanggal Lahir:</label>
+                        <input type="date" id="tanggal-lahir" name="tanggal-lahir" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Jenis Kelamin:</label>
+                        <div class="radio-group">
+                            <input type="radio" id="laki-laki" name="jenis-kelamin" value="Laki-Laki" required>
+                            <label for="laki-laki">Laki-Laki</label>
+                            <input type="radio" id="perempuan" name="jenis-kelamin" value="Perempuan" required>
+                            <label for="perempuan">Perempuan</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pesan">Pesan:</label>
+                        <textarea id="pesan" name="pesan" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+                <div class="form-output">
+                    <h4>Data Terkirim:</h4>
+                    <p><strong>Waktu:</strong> <span id="current-time"></span></p>
+                    <p><strong>Nama:</strong> <span id="output-nama"></span></p>
+                    <p><strong>Tanggal Lahir:</strong> <span id="output-tanggal-lahir"></span></p>
+                    <p><strong>Gender:</strong> <span id="output-jenis-kelamin"></span></p>
+                    <p><strong>Pesan:</strong> <span id="output-pesan"></span></p>
+                </div>
+            </div>
         </section>
-        <hr/>
-        <!-- contact us -->
-        <section id="contact-us" class="contact-us"></section>
-        <hr/>
     </main>
 
-    <footer style="text-align: center;"></footer>
+    <footer class="footer">
+        <p>*ini WM "by Gregorius Radi Alfredo"</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
-

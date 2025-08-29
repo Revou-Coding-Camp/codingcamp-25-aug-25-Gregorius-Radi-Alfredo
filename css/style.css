@@ -1,32 +1,158 @@
-.header{
-    display: flex; align-items: center;
-    justify-content: space-between;
-}.icon{
-    width: 50px;
-    height: 50px;
-    background-color: aqua;
-    background-image: url("../images/gambar-burung.jpg");
-    background-size: cover;
-    background-position: center;
-}.navbar {
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f9fafb;
+    color: #333;
+    line-height: 1.6;
+}.header {
     display: flex;
-    justify-content: flex-end;
-    display: flex; gap: 10px;
-}.home-page{
-    min-height: 500px;
-}.profile{
-    min-height: 500px;
-}.portofolio{
-    min-height: 500px;
-}.contact-us{
-    min-height: 500px;
-}.judul{
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dee2e6;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}.logo-img {
+    width: 45px;
+    height: 45px;
+}.logo-text {
+    font-size: 1.7em;
+    font-weight: 600;
+}.navbar a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.2s, color 0.2s;
+}.navbar a:hover {
+    background-color: #007bff;
+    color: white;
+}.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 40px;
+}section {
+    margin-bottom: 60px;
+}h1, h2 {
     text-align: center;
-    font-size: 30px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-transform: uppercase;
-    
-}.text{
+    margin-top: 0;
+    color: #212529;
+}
+h1 { font-size: 2.8em; margin-bottom: 15px; }
+h2 { font-size: 2.2em; margin-bottom: 40px; }
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
     text-align: center;
-    font-size: 20px;
+    padding: 20px;
+}.hero p {
+    font-size: 1.2em;
+    color: #6c757d;
+    max-width: 600px;
+}.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}.portfolio-item {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    text-align: center;
+    transition: transform 0.2s;
+}.portfolio-item:hover {
+    transform: translateY(-5px);
+}.portfolio-item i {
+    font-size: 3em;
+    color: #007bff;
+}.contact-form-section {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}.form-wrapper {
+    display: flex;
+    gap: 40px;
+}form { flex: 2; }
+.form-group { margin-bottom: 20px; }
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}input[type="text"], input[type="date"], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    box-sizing: border-box;
+}.radio-group label { font-weight: normal; }
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+}.form-output {
+    flex: 1;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}.profile-banner {
+    position: relative;
+    color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}.banner-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.6);
+}.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}.profile-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    margin-top: 30px;
+}.goals-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}.about-card {
+    margin-top: 0;
+ }/* last one */
+.footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #343a40;
+    color: white;
+    margin-top: 40px;
+}
+/* second last */
+@media (max-width: 768px) {
+    .header { flex-direction: column; gap: 20px; padding: 20px; }
+    .container { padding: 20px; }
+    .form-wrapper, .goals-grid { flex-direction: column; }
+    .portfolio-grid { grid-template-columns: 1fr; }
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 1.8em; }
 }
